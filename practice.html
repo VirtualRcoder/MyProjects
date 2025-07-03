@@ -1,0 +1,1630 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Task2</title>
+    <style>
+      .left{
+        width: 30%;
+        max-width: 30%;
+        border: 1px solid black;
+        padding: 15px;
+      }
+      .right{
+        width: 70%;
+        max-width: 70%;
+        border: 1px solid black;
+        margin-left: 20px;        
+        padding: 15px;
+      }
+      .parent{
+        display: flex;
+        flex-direction: row;
+      }
+      ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+        background-color: #333;
+      }
+      li{
+        padding: 10px 20px;
+        color: white;
+        cursor: pointer;
+      }
+      li:hover{
+        background-color: #555;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+      input,button{
+        padding: 8px;
+        font-size: 16px;
+        align-self: center;
+      }
+
+      h1{
+        text-align: center;
+      }
+      nav{
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      @media (max-width: 768px){
+        .parent {
+          flex-direction: column;
+        }
+          .left, .right{
+            width: 100%;
+            max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="parent">
+      <div class="left">
+        <h1>Solo Leveling</h1>
+        <p>Ginu Sang is a low rank hunter, Self Awakened, then grwon his power. </p>
+      </div>
+      <div class="right">
+        <h1>Want to be Solo Leveler</h1>
+        <form>
+          <label for="name">Name:</label>
+          <input name="name" id="name" placeholder="Enter name"/>
+
+          <label for="email">Email:</label>
+          <input name="email" id="email" placeholder="Enter email"/>
+          <button>Submit</button>
+        </form>
+
+      </div>
+    </main>
+  </body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Task2</title>
+    <style>
+      body{
+        font-family: sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+
+      .filter-bar{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .filter-bar button{
+        margin: 5px;
+        padding: 10px 15px;
+        border: none;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+
+      .filter-bar button:hover{
+        background: #0056b3;
+      }
+
+      .card-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .card{
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .card:hover{
+        transform: scale(1.03);
+        box-shadow: 0 8x 16px rgba(0,0,0,0.2);
+      }
+      .card img{
+        height: 160px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .card-content{
+        padding: 15px;
+      }
+
+      .card h3{
+        margin: 0 0 10px;
+      }
+
+      .card p{
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      .card button{
+        margin-top: 10px;
+        padding: 8px 12px;
+        border: none;
+        background: #28a745;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .card button:hover{
+        background: #1c7c31;
+      }
+
+      .hidden{
+        display: none;
+      }
+
+      .modal {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+      }
+      .modal.hidden {
+        display: none;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 500px;
+        position: relative;
+      }
+
+      #closeModal {
+        position: absolute;
+        top: 10px; right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="search-bar" style="text-align:center; margin-bottom: 20px;">
+      <input type="text" id="searchInput" placeholder="Search cards..." style="padding:10px; width:60%; font-size:16px;" />
+    </div>
+
+    <div class="filter-bar">
+      <button data-filter="all">All</button>
+      <button data-filter="tech">Tech</button>
+      <button data-filter="news">News</button>
+    </div>
+    <div class="card-grid">
+      <div class="card" data-category="tech">
+        <img src="https://placekitten.com/300/200"/>
+        <div class="card-content">
+          <h3>Card Title</h3>
+          <p>Description</p>
+          <button class="read-more">Read More</button>
+        </div>
+      </div>
+      <div class="card"data-category="news">
+      <img src="https://placekitten.com/301/200" />
+      <div class="card-content">
+        <h3>Card Title 2</h3>
+        <p>This is a description of the card.</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+<div class="card" data-category="tech">
+      <img src="https://placekitten.com/301/200" />
+      <div class="card-content">
+        <h3>Card Title 2</h3>
+        <p>This is a description of the card.</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+<div class="card" data-category="tech">
+      <img src="https://placekitten.com/301/200" />
+      <div class="card-content">
+        <h3>Card Title 2</h3>
+        <p>This is a description of the card.</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+<div class="card" data-category="news">
+      <img src="https://placekitten.com/301/200" />
+      <div class="card-content">
+        <h3>Card Title 2</h3>
+        <p>This is a description of the card.</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+<div class="card" data-category="power">
+      <img src="https://placekitten.com/301/200" />
+      <div class="card-content">
+        <h3>Card Title 2</h3>
+        <p>This is a description of the card.</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+
+
+    </div>
+<div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+      </div>
+    </div>
+
+    <script>
+      const buttons = document.querySelectorAll('.filter-bar button');
+      const cards = document.querySelectorAll('.card');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', ()=>{
+          const filter = button.getAttribute('data-filter');
+          cards.forEach(card =>{
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category===filter){
+              card.classList.remove('hidden');
+            }
+            else{
+              card.classList.add('hidden')
+            }
+          })
+        })
+      })
+
+
+      const searchInput = document.getElementById('searchInput');
+
+      searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        cards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const desc = card.querySelector('p').textContent.toLowerCase();
+          if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+
+
+
+      const modal = document.getElementById('modal');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const closeModal = document.getElementById('closeModal');
+
+// Use the class 'read-more' to target only those buttons
+document.querySelectorAll('.read-more').forEach(button => {
+  button.addEventListener('click', (e) => {
+    const card = e.target.closest('.card');
+    modalTitle.textContent = card.querySelector('h3').textContent;
+    modalDesc.textContent = card.querySelector('p').textContent;
+    modal.classList.remove('hidden');
+  });
+});
+
+closeModal.addEventListener('click', () => {
+  modal.classList.add('hidden');
+});
+
+// Optional: clicking outside modal closes it
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.add('hidden');
+  }
+});
+
+
+    </script>
+  </body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Pricing Toggle</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+      padding: 40px;
+    }
+
+    .toggle-wrapper {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .toggle-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .child-grid {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .child-grid:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .child-grid h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .child-grid p {
+      color: #666;
+      margin: 8px 0;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .child-grid button {
+      margin-top: 15px;
+      padding: 10px 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .child-grid button:hover {
+      background-color: #1e7e34;
+    }
+
+    .featured {
+      border: 2px solid #ffc107;
+      transform: scale(1.06);
+    }
+
+    .badge {
+      background: #ffc107;
+      color: black;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toggle-wrapper">
+    <button class="toggle-btn" id="toggleBtn">Switch to Yearly</button>
+  </div>
+
+  <div class="main-grid">
+    <div class="child-grid">
+      <h2>Starter</h2>
+      <p class="price" data-monthly="19" data-yearly="199">$19/month</p>
+      <p>100 hits per month</p>
+      <p>3 hits per minute</p>
+      <button>Choose Plan</button>
+    </div>
+
+    <div class="child-grid featured">
+      <div class="badge">Best Value</div>
+      <h2>Pro</h2>
+      <p class="price" data-monthly="49" data-yearly="499">$49/month</p>
+      <p>200 hits per month</p>
+      <p>6 hits per minute</p>
+      <button>Choose Plan</button>
+    </div>
+
+    <div class="child-grid">
+      <h2>Enterprise</h2>
+      <p class="price" data-monthly="99" data-yearly="999">$99/month</p>
+      <p>Unlimited hits</p>
+      <p>Priority support</p>
+      <button>Choose Plan</button>
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const priceTags = document.querySelectorAll('.price');
+
+    let isMonthly = true;
+
+    toggleBtn.addEventListener('click', () => {
+      isMonthly = !isMonthly;
+
+      priceTags.forEach(tag => {
+        const monthly = tag.getAttribute('data-monthly');
+        const yearly = tag.getAttribute('data-yearly');
+        tag.textContent = isMonthly
+          ? `$${monthly}/month`
+          : `$${yearly}/year`;
+      });
+
+      toggleBtn.textContent = isMonthly
+        ? 'Switch to Yearly'
+        : 'Switch to Monthly';
+    });
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- CSS GRID LAYOOUT -->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Grid Laayout</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        gap: 10px;
+        background: #eee;
+      }
+
+      .grid-container2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+        background: #eee;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        background: #eee;
+      }
+      .grid div, .grid-container2 div, .grid-container div {
+        background: #ccc;
+        padding: 40px;
+        text-align: center;
+      }
+
+/* Grid Lines (line numbers) */
+      .grid-container3 {
+        display: grid;
+        grid-template-columns: 100px 100px 700px;
+        grid-template-rows: 50px 50px 50px;
+        border: 1px solid #4ad;
+        background: #eee;
+      }
+      .box1 {
+        grid-column: 8 / 8  ; /* spans column 1 to 2 (end is exclusive) */
+        grid-row: 2/4;
+        background: #ccc;
+        border: 1px solid #000;
+      }
+      .box2 {
+        grid-row: 1 / 3;    /* spans row 1 to 2 */
+        grid-column: 1/4;
+        background: #cce; 
+        border: 1px solid #4ad;
+      }
+      .box3 {
+        grid-column: 1 / 4; /* spans column 1 to 2 (end is exclusive) */
+        grid-row: 1/2;
+        background: #4ad;
+
+      }
+      .box5{
+        background-color: azure;
+      }
+
+/* Grid Area Naming */
+      .grid-container4 {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "sidebar . main"
+          "footer footer .";
+        grid-template-columns: 1fr 3fr;
+      }
+      .header { grid-area: header; border: 1px solid black; }
+      .sidebar { grid-area: sidebar; border: 1px solid black; margin: 2px;}
+      .main { grid-area: main; border: 1px solid #4ad; margin: 2px; width: 100px;}
+      .footer { grid-area: footer; border: 1px solid black; }
+
+
+      .grid-container5 {
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(2, 100px);
+        gap: 20px;
+      }
+      .grid-container5 div {
+        background: lightgray;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      .grid-container6 {
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(2, 150px);
+        justify-items: center; /* horizontal centering of grid cells */
+        align-items: center;   /* vertical centering of grid cells */
+        justify-content: center;/* make whole grid to center*/
+      
+        background-image: linear-gradient(to right, gray 1px, transparent 1px);
+        background-size: calc(100% / 4) 100%;
+      
+        gap: 10px;
+        border: 1px solid #000;
+      }
+      
+      .item {
+        background: lightcoral;
+        width: 80px;
+        height: 40px;
+        justify-self: start;
+        align-self: end;
+      }
+
+      .grid-container6 div{
+        border: 1px solid #000;
+      }
+
+
+      .grid-container7 {
+        display: grid;
+        width: 330px;
+        grid-template-columns: repeat(2, 150px); /* Explicit: 2 columns */
+        grid-template-rows: 100px;               /* Explicit: 1 row */
+        grid-auto-rows: 50px;                    /* Implicit rows will be 50px tall */
+        gap: 10px;
+        background: #f0f0f0;
+        padding: 10px;
+      }
+
+      .item2 {
+        background: steelblue;
+        color: white;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .grid-container8 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .item3 {
+        background: lightcoral;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .one   { order: 2; }
+      .two   { order: 3; }
+      .three { order: 1; }
+
+      .grid-container9 {
+        display: grid;
+      }
+      .box91 {
+        grid-area: 1 / 1 / 3 / 3;
+        background: lightblue;
+        z-index: 1;
+      }
+      .box92 {
+        grid-area: 2 / 2 / 4 / 4;
+        background: lightcoral;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS GRID LAYOUT EXAMPLES</h1>
+    <h2>Basic Grid Setup</h2>
+    <div class="grid-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <br/><br/>
+    <h2>Auto-fill vs Auto-fit</h2>
+    <h3>Auto-fit</h3>
+    <div class="grid-container2">
+      <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+    </div>
+    <br/>
+    <h3>Auto-fill</h3>
+    <div class="grid">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <br/><br/>
+    <h2>Grid Lines (line numbers)</h2>
+    <div class="grid-container3">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+
+      <div class="box4">4</div>
+      <div class="box5">5</div>
+    </div>
+    <p>
+      Grid lines are super useful when you want:
+      <ul>
+        <li>Overlapping items</li>
+        <li>Skipping grid cells</li>
+        <li>Asymmetric layouts (e.g., sidebars, hero sections)</li>
+        <li>Manual item placement</li>
+      </ul>
+    </p>
+
+    <br/><br/>
+    <h2>Grid Area Naming</h2>
+    <div class="grid-container4">
+      <div class="header">Header</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="main">Main</div>
+      <div class="footer">Footer</div>
+    </div>
+    <p>Benefits:
+      <ul>
+        <li>Improves readability of layout</li>
+        <li>Easier to maintain and visualize grid structure</li>
+        <li>Great for layout prototyping</li>
+      </ul>
+    </p>
+
+    <br/><br/>
+    <h2>Grid Gap</h2>
+    <div class="grid-container5">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <p>What It Affects
+      <ul>
+        <li>Only the space between grid tracks (not outside the grid).</li>
+        <li>Does not affect the size of grid items — it’s just spacing between them.</li>
+      </ul>
+    </p>
+    <p>Gives clean spacing without margin hacks, especially useful for:
+      <ul>
+        <li>Cards in a grid</li>
+        <li>Dashboards</li>
+        <li>Image galleries</li>
+      </ul>
+    </p>
+
+    <br/><br/>
+    <h2>Justify and Align Items</h2>
+    <div class="grid-container6">
+      <div class="item">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <p>Using below two, i have drawn lines in container:
+      <ul>
+        <li>background-image: linear-gradient(to right, gray 1px, transparent 1px);</li>
+        <li>background-size: calc(100% / 4) 100%;</li>
+      </ul>
+    </p>
+
+    <br/><br/>
+    <h2>Explicit vs Implicit Grid</h2>
+    <div class="grid-container7">
+      <div class="item2">1</div>
+      <div class="item2">2</div>
+      <div class="item2">3</div>
+      <div class="item2">4</div>
+      <div class="item2">5</div> <!-- Causes an implicit row -->
+    <!-- </div>
+
+    <br/><br/>
+    <h2>Reordering Items</h2>
+    <div class="grid-container8">
+      <div class="item one">One</div>
+      <div class="item two">Two</div>
+      <div class="item three">Three</div>
+    </div>
+
+    <br/><br/>
+    <h2> Layering with Grid (Z-index + Area Overlap)</h2>
+    <div class="grid-container9">
+      <div class="box91">Box 1</div>
+      <div class="box92">Box 2</div>
+    </div>
+  </body>
+</html> -->
+
+
+<!-- FLEXBOX LAYOUT -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flexbox Layout Lab</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .flex-container {
+      display: flex;
+      height: 300px;
+      border: 2px dashed #888;
+      padding: 10px;
+      gap: 10px;
+      transition: all 0.3s ease;
+      background: #f5f5f5;
+    }
+    .item {
+      background: #4caf50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      flex: 1;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧪 Flexbox Layout Lab</h1>
+
+  <div class="controls">
+    <label>Flex Direction:
+      <select id="flexDirection">
+        <option>row</option>
+        <option>row-reverse</option>
+        <option>column</option>
+        <option>column-reverse</option>
+      </select>
+    </label>
+
+    <label>Justify Content:
+      <select id="justifyContent">
+        <option>flex-start</option>
+        <option>center</option>
+        <option>flex-end</option>
+        <option>space-between</option>
+        <option>space-around</option>
+        <option>space-evenly</option>
+      </select>
+    </label>
+
+    <label>Align Items:
+      <select id="alignItems">
+        <option>stretch</option>
+        <option>flex-start</option>
+        <option>center</option>
+        <option>flex-end</option>
+        <option>baseline</option>
+      </select>
+    </label>
+
+    <label>Flex Wrap:
+      <select id="flexWrap">
+        <option>nowrap</option>
+        <option>wrap</option>
+        <option>wrap-reverse</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="flex-container" id="flexContainer">
+    <div class="item" style="order: 1; flex-grow: 1;">Item 1</div>
+    <div class="item" style="order: 2; flex-grow: 2;">Item 2</div>
+    <div class="item" style="order: 3; flex-grow: 1;">Item 3</div>
+  </div>
+
+  <script>
+    const flexContainer = document.getElementById('flexContainer');
+    document.getElementById('flexDirection').onchange = e => flexContainer.style.flexDirection = e.target.value;
+    document.getElementById('justifyContent').onchange = e => flexContainer.style.justifyContent = e.target.value;
+    document.getElementById('alignItems').onchange = e => flexContainer.style.alignItems = e.target.value;
+    document.getElementById('flexWrap').onchange = e => flexContainer.style.flexWrap = e.target.value;
+  </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Justify Content Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    .row {
+      display: flex;
+      border: 1px dashed #aaa;
+      background: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 20px;
+      height: 80px;
+      align-items: center;
+    }
+
+    .item {
+      background: steelblue;
+      color: white;
+      padding: 20px;
+      font-size: 18px;
+      margin: 0 5px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Flexbox: justify-content Examples</h1>
+
+  <div class="label">justify-content: flex-start</div>
+  <div class="row" style="justify-content: flex-start;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="label">justify-content: flex-end</div>
+  <div class="row" style="justify-content: flex-end;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="label">justify-content: center</div>
+  <div class="row" style="justify-content: center;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="label">justify-content: space-between</div>
+  <div class="row" style="justify-content: space-between;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="label">justify-content: space-around</div>
+  <div class="row" style="justify-content: space-around;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="label">justify-content: space-evenly</div>
+  <div class="row" style="justify-content: space-evenly;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Justify Content Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    .label {
+      font-weight: bold;
+      margin: 20px 0 10px;
+    }
+
+    .flex-row {
+      display: flex;
+      border: 2px dashed #ccc;
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 20px;
+      height: 80px;
+      align-items: center;
+    }
+
+    .item {
+      background: salmon;
+      padding: 10px 20px;
+      margin: 5px;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="label">justify-content: flex-start</div>
+  <div class="flex-row" style="justify-content: flex-start;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="label">justify-content: flex-end</div>
+  <div class="flex-row" style="justify-content: flex-end;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="label">justify-content: center</div>
+  <div class="flex-row" style="justify-content: center;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="label">justify-content: space-between</div>
+  <div class="flex-row" style="justify-content: space-between;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="label">justify-content: space-around</div>
+  <div class="flex-row" style="justify-content: space-around;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="label">justify-content: space-evenly</div>
+  <div class="flex-row" style="justify-content: space-evenly;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox align-items Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin: 20px 0 5px;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      border: 1px dashed #aaa;
+      background: #f9f9f9;
+      height: 120px;
+      margin-bottom: 20px;
+    }
+
+    .item {
+      background: teal;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    .tall    { height: 80px; }
+    .medium  { height: 50px; }
+    .short   { height: 30px; }
+  </style>
+</head>
+<body>
+
+  <h1>Flexbox: align-items Examples</h1>
+
+  <div class="label">align-items: flex-start</div>
+  <div class="row" style="align-items: flex-start;">
+    <div class="item tall">Tall</div>
+    <div class="item medium">Medium</div>
+    <div class="item short">Short</div>
+  </div>
+
+  <div class="label">align-items: flex-end</div>
+  <div class="row" style="align-items: flex-end;">
+    <div class="item tall">Tall</div>
+    <div class="item medium">Medium</div>
+    <div class="item short">Short</div>
+  </div>
+
+  <div class="label">align-items: center</div>
+  <div class="row" style="align-items: center;">
+    <div class="item tall">Tall</div>
+    <div class="item medium">Medium</div>
+    <div class="item short">Short</div>
+  </div>
+
+  <div class="label">align-items: stretch (default)</div>
+  <div class="row" style="align-items: stretch;">
+    <div class="item">Stretch 1</div>
+    <div class="item">Stretch 2</div>
+    <div class="item">Stretch 3</div>
+  </div>
+
+  <div class="label">align-items: baseline</div>
+  <div class="row" style="align-items: baseline;">
+    <div class="item" style="font-size: 16px;">16px</div>
+    <div class="item" style="font-size: 24px;">24px</div>
+    <div class="item" style="font-size: 32px;">32px</div>
+  </div>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox align-content Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin: 20px 0 5px;
+    }
+
+    .wrap-container {
+      display: flex;
+      flex-wrap: wrap;
+      height: 300px; /* extra space to show alignment */
+      width: 300px;
+      gap: 10px;
+      border: 1px dashed #aaa;
+      background: #f9f9f9;
+      margin-bottom: 30px;
+    }
+
+    .item {
+      background: royalblue;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      padding: 20px;
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Flexbox: align-content Examples</h1>
+
+  <div class="label">align-content: flex-start</div>
+  <div class="wrap-container" style="align-content: flex-start;">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+  </div>
+
+  <div class="label">align-content: flex-end</div>
+  <div class="wrap-container" style="align-content: flex-end;">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+  </div>
+
+  <div class="label">align-content: center</div>
+  <div class="wrap-container" style="align-content: center;">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+  </div>
+
+  <div class="label">align-content: space-between</div>
+  <div class="wrap-container" style="align-content: space-between;">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+  </div>
+
+  <div class="label">align-content: space-around</div>
+  <div class="wrap-container" style="align-content: space-around;">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+  </div>
+
+  <div class="label">align-content: space-evenly</div>
+  <div class="wrap-container" style="align-content: space-evenly;">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+  </div>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>align-items vs align-content (Flexbox)</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    select {
+      margin-right: 30px;
+      padding: 4px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 320px;
+      height: 300px;
+      gap: 10px;
+      border: 2px dashed #aaa;
+      background: #f4f4f4;
+      transition: all 0.3s ease;
+    }
+
+    .item {
+      background: steelblue;
+      color: white;
+      width: 90px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <h1>align-items vs align-content</h1>
+
+  <div class="controls">
+    <label for="alignItems">align-items:</label>
+    <select id="alignItems">
+      <option value="stretch">stretch</option>
+      <option value="flex-start">flex-start</option>
+      <option value="center" selected>center</option>
+      <option value="flex-end">flex-end</option>
+      <option value="baseline">baseline</option>
+    </select>
+
+    <label for="alignContent">align-content:</label>
+    <select id="alignContent">
+      <option value="stretch">stretch</option>
+      <option value="flex-start">flex-start</option>
+      <option value="center" selected>center</option>
+      <option value="flex-end">flex-end</option>
+      <option value="space-between">space-between</option>
+      <option value="space-around">space-around</option>
+      <option value="space-evenly">space-evenly</option>
+    </select>
+  </div>
+
+  <div class="container" id="flexboxContainer">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div>
+
+  <script>
+    const container = document.getElementById("flexboxContainer");
+    const alignItems = document.getElementById("alignItems");
+    const alignContent = document.getElementById("alignContent");
+
+    alignItems.addEventListener("change", () => {
+      container.style.alignItems = alignItems.value;
+    });
+
+    alignContent.addEventListener("change", () => {
+      container.style.alignContent = alignContent.value;
+    });
+
+    // Set initial values
+    container.style.alignItems = alignItems.value;
+    container.style.alignContent = alignContent.value;
+  </script>
+
+</body>
+</html>
+ -->
+
+<!-- BASIC TRANSITION and ANIMATION -->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    html { font-size: 16px; }
+
+    .card {
+      width: 80%;
+      padding: 2em;
+      margin: 2vh auto;
+      background: #eee;
+      font-size: 1rem;
+    }
+
+    .card h2 {
+      font-size: 4vw;
+    }
+    .btn {
+  padding: 10px 20px;
+  background: royalblue;
+  color: white;
+  transition: background 0.3s ease-in-out; /*transition: property duration timing-function delay;*/
+}
+
+.btn:hover {
+  background: orange;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation: moveRight 3s ease-in-out 5s 2; /*animation: name duration timing-function delay iteration-count direction;*/
+}
+
+@keyframes moveRight {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(200px); }
+  100% { transform: translateX(0); }
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background: hotpink;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { top: 0; }
+  50% { top: 200px; }
+}
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Responsive Title</h2>
+      <p>This card uses rem, %, and vw for layout.</p>
+    </div>
+
+    <button class="btn">Hover Me</button>
+    <div class="box"></div>
+    <div class="ball"></div>
+
+
+  </body>
+</html> -->
+
+<!-- DISPLAY & POSITIONING -->
+
+<!-- <!DOCTYPE html>
+<title>Display playground</title>
+<style>
+  /* section {margin:2rem 0;}
+  .box   {padding:1rem; border:1px solid #444; background:#fafafa;}
+  .wrap  {background:#e3f2fd; padding:.5rem; margin-top:.5rem;}
+  .wrap > * {background:#bbdefb; margin:.25rem;} */
+  .card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-in, transform 0.4s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+
+<h1>Display playground</h1>
+
+<section>
+  <h2>Inline vs. Block</h2>
+  <div class="wrap">
+    <span class="box" style="display:inline;">inline</span>
+    <span class="box" style="display:inline;">inline</span>
+    <span class="box" style="display:block;">block</span>
+    <span class="box" style="display:inline;">inline</span>
+  </div>
+</section>
+
+<section>
+  <h2>Inline‑block</h2>
+  <div class="wrap">
+    <span class="box" style="display:inline-block; width:120px;">inline‑block 120 px</span>
+    <span class="box" style="display:inline-block;">inline‑block auto</span>
+  </div>
+</section>
+
+<section>
+  <h2>Flex (row wrap)</h2>
+  <div class="wrap" style="display:flex; flex-wrap:wrap;">
+    <div class="box" style="flex:1 1 160px;">1</div>
+    <div class="box" style="flex:2 1 160px;">2 (grows double)</div>
+    <div class="box" style="flex:1 1 160px;">3</div>
+    <div class="box" style="flex:1 1 160px;">4</div>
+  </div>
+</section>
+
+<section>
+  <h2>Grid (auto‑fit)</h2>
+  <div class="wrap" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:.5rem;">
+    <div class="box">A</div><div class="box">B</div><div class="box">C</div><div class="box">D</div>
+  </div>
+</section>
+<section style="position:relative; height:200px; border:2px dashed tomato; margin-bottom:4rem;">
+  <strong>Relative parent (dashed)</strong>
+  <div class="box" style="position:absolute; top:20px; right:20px;">absolute child</div>
+</section>
+
+<section>
+  <h2>Fixed vs. Sticky</h2>
+  <div class="box" style="position:fixed; bottom:1rem; right:1rem;">fixed ⇢ bottom‑right</div>
+  <div class="box" style="position:sticky; top:0;">I become sticky when you scroll</div>
+  <p style="line-height:2">👋 Scroll a bit to see the effect…<br/> (Add filler text here)</p>
+</section>
+<div class="card">Hello!</div>
+<button onclick="document.querySelector('.card').classList.toggle('show')">Toggle</button>
+ -->
+
+
+ <!-- Assignment Projects -->
+
+ <!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .btn{
+      background-color: blue;
+      padding: 10px;
+      scale: 1;
+      transition: background-color 0.3s ease, scale 0.3s ease, transform 0.3s ease-out;
+    }
+
+    .btn:hover{
+      background-color: blueviolet; 
+      scale: 2;
+      transform: translateX(200px);
+    }
+
+    .card {
+      transform-origin: left center;
+      transition: transform 0.3s ease, font-size 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.2);
+      font-size: 18px;
+    }
+
+
+
+  </style>
+ </head>
+ <body>
+  <button class="btn">Hell</button> <br/><br/>
+  <div class="card">
+    <h1>Heading</h1>
+    <p>I love mango</p>
+  </div>
+ </body>
+ </html> -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smooth Dropdown + Select</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2em;
+    }
+
+    .dropdown {
+      width: 200px;
+      margin-bottom: 2em;
+    }
+
+    .dropdown-btn {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .dropdown-content {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      background-color: #f9f9f9;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+
+    .dropdown:hover .dropdown-content {
+      max-height: 300px;
+      opacity: 1;
+    }
+
+    .dropdown-content p {
+      padding: 10px;
+      margin: 0;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Style native select */
+    .select-wrapper {
+      margin-top: 2em;
+    }
+
+    select {
+      width: 200px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Animated Dropdown -->
+  <div class="dropdown">
+    <button class="dropdown-btn">Menu</button>
+    <div class="dropdown-content">
+      <p>Item 1</p>
+      <p>Item 2</p>
+      <p>Item 3</p>
+    </div>
+  </div>
+
+  <!-- Native Select Dropdown -->
+  <div class="select-wrapper">
+    <label for="cars">Choose a car:</label><br><br>
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </div>
+
+</body>
+</html>
+

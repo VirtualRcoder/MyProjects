@@ -1,0 +1,623 @@
+{
+  "best_flights": [
+    {
+      "price": 10020,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 175",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 10:35",
+          "arrival_time": "2025-07-21 13:30",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 160,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2814",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 00:15",
+          "arrival_time": "2025-07-21 02:55",
+          "duration": 160
+        }
+      ]
+    },
+    {
+      "price": 10689,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/QP.png",
+      "total_duration": 170,
+      "segments": [
+        {
+          "airline": "Akasa Air",
+          "flight_number": "QP 1339",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 13:30",
+          "arrival_time": "2025-07-21 16:20",
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "price": "N/A",
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/IX.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "Air India Express",
+          "flight_number": "IX 1169",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 10:25",
+          "arrival_time": "2025-07-21 13:20",
+          "duration": 175
+        }
+      ]
+    }
+  ],
+  "other_flights": [
+    {
+      "price": 9957,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 360,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 537",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Rajiv Gandhi International Airport",
+          "departure_time": "2025-07-21 10:10",
+          "arrival_time": "2025-07-21 11:30",
+          "duration": 80
+        },
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 6043",
+          "from": "Rajiv Gandhi International Airport",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 13:45",
+          "arrival_time": "2025-07-21 16:10",
+          "duration": 145
+        }
+      ]
+    },
+    {
+      "price": 10020,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 5267",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 19:15",
+          "arrival_time": "2025-07-21 22:10",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": 10020,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 170,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 6406",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 20:30",
+          "arrival_time": "2025-07-21 23:20",
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 170,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2414",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 03:05",
+          "arrival_time": "2025-07-21 05:55",
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 180,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2810",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 03:55",
+          "arrival_time": "2025-07-21 06:55",
+          "duration": 180
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2654",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 06:40",
+          "arrival_time": "2025-07-21 09:35",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2804",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 09:10",
+          "arrival_time": "2025-07-21 12:05",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 165,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2406",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 10:10",
+          "arrival_time": "2025-07-21 12:55",
+          "duration": 165
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2652",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 11:00",
+          "arrival_time": "2025-07-21 13:55",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2416",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 12:50",
+          "arrival_time": "2025-07-21 15:45",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 165,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 428",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 14:25",
+          "arrival_time": "2025-07-21 17:10",
+          "duration": 165
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 180,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2511",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 15:30",
+          "arrival_time": "2025-07-21 18:30",
+          "duration": 180
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 190,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2418",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 16:00",
+          "arrival_time": "2025-07-21 19:10",
+          "duration": 190
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 180,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2802",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 18:45",
+          "arrival_time": "2025-07-21 21:45",
+          "duration": 180
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 190,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2665",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 19:20",
+          "arrival_time": "2025-07-21 22:30",
+          "duration": 190
+        }
+      ]
+    },
+    {
+      "price": 10501,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 165,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2661",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 21:20",
+          "arrival_time": "2025-07-22 00:05",
+          "duration": 165
+        }
+      ]
+    },
+    {
+      "price": 11055,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 170,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 2381",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 13:05",
+          "arrival_time": "2025-07-21 15:55",
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "price": 11055,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 2328",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 14:15",
+          "arrival_time": "2025-07-21 17:10",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": 11055,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 170,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 2174",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 15:15",
+          "arrival_time": "2025-07-21 18:05",
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "price": 11055,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 180,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 6034",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 18:00",
+          "arrival_time": "2025-07-21 21:00",
+          "duration": 180
+        }
+      ]
+    },
+    {
+      "price": 11055,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 170,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 2359",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 21:45",
+          "arrival_time": "2025-07-22 00:35",
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "price": 11055,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 180,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 2335",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 23:00",
+          "arrival_time": "2025-07-22 02:00",
+          "duration": 180
+        }
+      ]
+    },
+    {
+      "price": 11099,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 170,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2808",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 06:55",
+          "arrival_time": "2025-07-21 09:45",
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "price": 11099,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2868",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 08:00",
+          "arrival_time": "2025-07-21 10:55",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": 11099,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2820",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 18:05",
+          "arrival_time": "2025-07-21 21:00",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": 11099,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AI.png",
+      "total_duration": 170,
+      "segments": [
+        {
+          "airline": "Air India",
+          "flight_number": "AI 2818",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 20:25",
+          "arrival_time": "2025-07-21 23:15",
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "price": 11691,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/QP.png",
+      "total_duration": 165,
+      "segments": [
+        {
+          "airline": "Akasa Air",
+          "flight_number": "QP 1359",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 05:00",
+          "arrival_time": "2025-07-21 07:45",
+          "duration": 165
+        }
+      ]
+    },
+    {
+      "price": 11842,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 869",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 11:45",
+          "arrival_time": "2025-07-21 14:40",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": 12210,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 2021",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 04:50",
+          "arrival_time": "2025-07-21 07:45",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": 12210,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 185,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 5256",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 09:15",
+          "arrival_time": "2025-07-21 12:20",
+          "duration": 185
+        }
+      ]
+    },
+    {
+      "price": 12630,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 180,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 2368",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 07:00",
+          "arrival_time": "2025-07-21 10:00",
+          "duration": 180
+        }
+      ]
+    },
+    {
+      "price": 12787,
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/6E.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "IndiGo",
+          "flight_number": "6E 6039",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 16:35",
+          "arrival_time": "2025-07-21 19:30",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": "N/A",
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/IX.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "Air India Express",
+          "flight_number": "IX 1116",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 04:30",
+          "arrival_time": "2025-07-21 07:25",
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "price": "N/A",
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/IX.png",
+      "total_duration": 175,
+      "segments": [
+        {
+          "airline": "Air India Express",
+          "flight_number": "IX 2754",
+          "from": "Kempegowda International Airport Bengaluru",
+          "to": "Indira Gandhi International Airport",
+          "departure_time": "2025-07-21 20:40",
+          "arrival_time": "2025-07-21 23:35",
+          "duration": 175
+        }
+      ]
+    }
+  ]
+}
